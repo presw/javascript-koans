@@ -32,9 +32,9 @@ describe("About Arrays", function() {
   it("should understand array length", function() {
     var fourNumberArray = [1, 2, 3, 4];
 
-    expect(fourNumberArray.length).toBe(3);
+    expect(fourNumberArray.length).toBe(4);
     fourNumberArray.push(5, 6);
-    expect(fourNumberArray.length).toBe(5);
+    expect(fourNumberArray.length).toBe(6);
 
     var tenEmptyElementArray = new Array(10); 
     expect(tenEmptyElementArray.length).toBe(10);
@@ -62,7 +62,7 @@ describe("About Arrays", function() {
       refArray[1] = "changed in function";
     }
     passedByReference(array);
-    expect(array[1]).toBe("one");
+    expect(array[1]).toBe("changed in function");
 
     var assignedArray = array;
     assignedArray[5] = "changed in assignedArray";
@@ -91,7 +91,7 @@ describe("About Arrays", function() {
     expect(array).toEqual([3, 1, 2]);
     
     var shiftedValue = array.shift();
-    expect(shiftedValue).toEqual([1, 2]);
-    expect(array).toEqual([3, 1, 2]);
+    expect(shiftedValue).toEqual(3);
+    expect(array).toEqual([1, 2]);
   });  
 });
