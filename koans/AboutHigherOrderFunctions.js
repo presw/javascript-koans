@@ -49,7 +49,7 @@ describe("About Higher Order Functions", function() {
     _(numbers).forEach(isEven);
     
     expect(msg).toEqual("falsetruefalse");
-    expect(numbers).toEqual(["falsetruefalse"]);
+    expect(numbers).toEqual([1, 2, 3]);
   });
     
   it("should use 'all' to test whether all items pass condition", function() {
