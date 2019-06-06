@@ -48,8 +48,8 @@ describe("About Higher Order Functions", function() {
 
     _(numbers).forEach(isEven);
     
-    expect(msg).toEqual("2");
-    expect(numbers).toEqual([1,2,3]);
+    expect(msg).toEqual("falsetruefalse");
+    expect(numbers).toEqual(["falsetruefalse"]);
   });
     
   it("should use 'all' to test whether all items pass condition", function() {
@@ -89,7 +89,7 @@ describe("About Higher Order Functions", function() {
                      .reduce(function(sum, x) { return sum + x })
                      .value();
 
-    expect(result).toEqual(12);
+    expect(result).toEqual(6);
   });
 
 });
