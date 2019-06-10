@@ -58,7 +58,7 @@ describe("About Applying What We Have Learnt", function() {
   it("should add all the natural numbers below 1000 that are multiples of 3 or 5 (functional)", function () {
 
     // BUG: Math is slightly off -- REVISIT
-    var sum = _(_.range(1, 1001)).chain()
+    var sum = _(_.range(0, 1000)).chain()
                               .reduce(function(memo, num) {
                                 if (num % 3 === 0 || num % 5 === 0) {
                                   return memo + num;
